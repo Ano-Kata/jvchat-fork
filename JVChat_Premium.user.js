@@ -192,8 +192,8 @@ body {
 }
 
 
-.jvchat-textarea-focus {
-    height: 8rem !important;
+#message_topic.jvchat-textarea-focus {
+  height: 8rem !important;
 }
 
 .jvchat-disabled-form {
@@ -321,7 +321,7 @@ label {
     resize: none;
     min-width: unset;
     max-height: 8rem;
-    height: 4rem;
+    height: 4rem !important;
 }
 
 .messageEditor__containerPreview {
