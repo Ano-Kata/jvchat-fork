@@ -166,6 +166,7 @@ body {
   border-radius: 0.5rem;
 }
 
+/* [RMV: RAND0 Left Bar]
 #jvchat-leftbar {
   max-width: 15rem;
   width: 13rem;
@@ -173,6 +174,16 @@ body {
   flex-shrink: 1;
   position: relative;
 }
+[RMV END] */
+
+/* [ADD BLAFF: Left Bar] */
+#jvchat-leftbar {
+    max-width: 15rem;
+    flex-grow: 100000;
+    flex-shrink: 100;
+    position: relative;
+}
+/* [ADD BLAFF END] */
 
 #jvchat-leftbar-button {
   display: flex;
@@ -251,12 +262,47 @@ label {
   margin: 0;
 }
 
+/* [RMV CSS Rando]
 #message_topic {
   resize: none;
   min-width: unset;
   max-height: 8rem;
   height: 4rem;
 }
+[RMV END] */
+
+/* [AMD CSS Blaff] */
+#message_topic {
+    resize: none;
+    min-width: unset;
+}
+/* [ADD END] */
+
+/* [ADD CSS Perso] */
+#message_topic {
+    max-height: 130px;
+    height: 130px !important;
+    line-height: 1.2rem;
+}
+
+.simpleButton.postMessage {
+    border: 2px solid var(--jv-border-color);
+    background-color: inherit;
+}
+.simpleButton.postMessage:hover {
+    background-color: var(--jv-border-color);
+}
+
+#bloc-formulaire-forum {
+    margin-bottom: 5px !important;
+    margin-left: 5px ! important;
+}
+
+.jvchat-author a {
+    color: inherit;
+    text-decoration: none;
+}
+/* [ADD END] */
 
 .messageEditor__containerPreview {
   display: none;
@@ -308,19 +354,19 @@ label {
 
 #jvchat-post::before {
   font-family: "jvchat-icons";
-  content: "\EA28";
+  content: "\uEA28";
   font-size: 1rem;
 }
 
 #jvchat-reduce::before {
   font-family: "jvchat-icons";
-  content: "\EA8E";
+  content: "\uEA8E";
   font-size: 1.4rem;
 }
 
 #jvchat-enlarge::before {
   font-family: "jvchat-icons";
-  content: "\EA84";
+  content: "\uEA84";
   font-size: 1.4rem;
 }
 
@@ -398,6 +444,7 @@ label {
   margin-top: 1rem;
 }
 
+
 .jvchat-config-option {
   margin-top: 2rem;
 }
@@ -429,7 +476,7 @@ label {
 }
 
 .jvchat-bloc-message {
-  animation-duration: 0.5s;
+  animation-duration:0.5s;
   animation-name: slidein;
 }
 
@@ -532,7 +579,7 @@ label {
 
 .jvchat-edition-check::before {
   font-family: "jvchat-icons";
-  content: "\EA0E";
+  content: "\uEA0E";
 }
 
 .jvchat-edition-cancel {
@@ -545,7 +592,7 @@ label {
 
 .jvchat-edition-cancel::before {
   font-family: "jvchat-icons";
-  content: "\EA77";
+  content: "\uEA77";
 }
 
 .jvchat-edition-textarea {
@@ -670,7 +717,7 @@ hr.jvchat-ruler:first-of-type {
 
 #jvchat-user-mp::before {
   font-family: "jvchat-icons";
-  content: "\EA43";
+  content: "\uEA43";
 }
 
 #jvchat-user-notif {
@@ -681,7 +728,7 @@ hr.jvchat-ruler:first-of-type {
 
 #jvchat-user-notif::before {
   font-family: "jvchat-icons";
-  content: "\EA7B";
+  content: "\uEA7B";
 }
 
 #jvchat-user-notif.has-notif::after,
@@ -947,6 +994,13 @@ hr.jvchat-ruler:first-of-type {
   cursor: pointer;
 }
 
+/* [ADD ] */
+#jvchat-citation-checkbox,
+#jvchat-citation-span {
+    cursor: pointer;
+}
+/* [ADD END] */
+
 .jvchat-night-mode #jvchat-leftbar > .panel {
   background-color: #2f3136 !important;
 }
@@ -1069,21 +1123,21 @@ hr.jvchat-ruler:first-of-type {
 }
 
 #jvchat-leftbar-config-open::before {
-  content: "\EA6F";
+  content: "\uEA6F";
   font-family: "jvchat-icons";
 }
 
 #jvchat-leftbar-config-close::before {
-  content: "\EA13";
+  content: "\uEA13";
   font-family: "jvchat-icons";
 }
 
 #jvchat-leftbar-reduce::before {
-  content: "\EA8C";
+  content: "\uEA8C";
   font-family: "jvchat-icons";
 }
 
 #jvchat-leftbar-extend::before {
-  content: "\EA88";
+  content: "\uEA88";
   font-family: "jvchat-icons";
 }
