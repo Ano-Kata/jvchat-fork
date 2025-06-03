@@ -1015,7 +1015,7 @@ hr.jvchat-ruler:first-of-type {
   border-top: 1px solid transparent !important;
 }
 
-.jvchat-night-mode .conteneur-editor,
+.jvchat-night-mode .messageEditor__buttonEdit,
 .jvchat-night-mode .bloc-editor-forum,
 .jvchat-night-mode .jvchat-bloc-message,
 .jvchat-night-mode .conteneur-messages-pagi {
