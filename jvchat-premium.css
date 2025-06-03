@@ -1017,6 +1017,7 @@ hr.jvchat-ruler:first-of-type {
 
 /* .jvchat-night-mode .conteneur-editor, */
 .jvchat-night-mode .messageEditor__buttonEdit,
+.jvchat-night-mode .messageEditor__containerEdit,
 .jvchat-night-mode .bloc-editor-forum,
 .jvchat-night-mode .jvchat-bloc-message,
 .jvchat-night-mode .conteneur-messages-pagi {
