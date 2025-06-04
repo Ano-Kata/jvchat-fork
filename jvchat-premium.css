@@ -1010,6 +1010,12 @@ hr.jvchat-ruler:first-of-type {
   scrollbar-color: #191a1c #2f3136 !important;
 }
 
+/* [ADD FIX] */
+.jvchat-night-mode .messageEditor__edit {
+    color: #dcddde!important; 
+}
+/* [ADD ] */
+
 .jvchat-night-mode .jvchat-ruler {
   border-color: #2e3035 !important;
   border-top: 1px solid transparent !important;
