@@ -5,11 +5,11 @@
 // @namespace    JVChatPremium
 // @license      MIT
 // @version      0.1.124
+// @grant        none
 // @match        http://*.jeuxvideo.com/forums/42-*
 // @match        https://*.jeuxvideo.com/forums/42-*
 // @match        http://*.jeuxvideo.com/forums/1-*
 // @match        https://*.jeuxvideo.com/forums/1-*
-// @grant        none
 // @downloadURL  https://github.com/Ano-Kata/jvchat-fork/raw/refs/heads/stand_alone/JVChat_Premium.user.js
 // @updateURL    https://github.com/Ano-Kata/jvchat-fork/raw/refs/heads/stand_alone/JVChat_Premium.user.js
 // @run-at       document-end
@@ -1142,8 +1142,6 @@ hr.jvchat-ruler:first-of-type {
   content: "\uEA88";
   font-family: "jvchat-icons";
 }
-
-
 
 </style>`;
 
