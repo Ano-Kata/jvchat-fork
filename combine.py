@@ -11,8 +11,8 @@ css_filename = "jvchat-premium.css"
 with open(css_filename, "r", encoding="utf-8") as f:
     css_content = f.read()
 
-# === 3) Corriger Unicode : \EA ➜ \UEA
-css_content = re.sub(r"\\([0-9A-Fa-f]{2,6})", r"\\U\1", css_content)
+# === 3) Corriger Unicode : \EA ➜ \uEA
+css_content = re.sub(r"\\([0-9A-Fa-f]{2,6})", r"\\u\1", css_content)
 
 # === 4) Préparer le bloc CSS
 css_block = f"let CSS = `<style type=\"text/css\" id=\"jvchat-css\">\n{css_content}\n</style>`;\n"
@@ -22,12 +22,20 @@ js_content = re.sub(r"^//\s*@grant.*$\n?", "", js_content, flags=re.MULTILINE)
 js_content = re.sub(r"^//\s*@resource.*$\n?", "", js_content, flags=re.MULTILINE)
 
 # === 6) Ajouter `@grant none` après @version ou avant ==/UserScript==
+# Insérer `@grant none` après `@version`
 js_content = re.sub(
-    r"(// ==UserScript==.*?)(\n)(?=// @|// ==/UserScript==)",
-    r"\1\n// @grant       none",
+    r"(//\s*@version.*?$)",
+    r"\1\n// @grant        none",
     js_content,
-    flags=re.DOTALL
+    flags=re.MULTILINE
 )
+
+# entete ===
+correct_url = "https://github.com/Ano-Kata/jvchat-fork/raw/refs/heads/stand_alone/JVChat_Premium.user.js"
+js_content = re.sub(r"^//\s*@downloadURL.*$", f"// @downloadURL  {correct_url}", js_content, flags=re.MULTILINE)
+js_content = re.sub(r"^//\s*@updateURL.*$", f"// @updateURL    {correct_url}", js_content, flags=re.MULTILINE)
+
+
 
 # === 7) Supprimer la ligne `const jvchatCSS = GM_getResourceText(...)`
 js_content = re.sub(r"^.*GM_getResourceText.*$\n?", "", js_content, flags=re.MULTILINE)
@@ -52,7 +60,7 @@ output_filename = f"{name_part}M{ext}"
 with open(output_filename, "w", encoding="utf-8") as f:
     f.write(js_content)
 
-print(f"✅ Fichier standalone généré : {output_filename}")
+print(f" Fichier standalone généré : {output_filename}")
 
 # === 12) Pause manuelle ===
 input("\nEntrée pour fermer le script...")
